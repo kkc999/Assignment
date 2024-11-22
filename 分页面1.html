@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR摄像头</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/AR.js/aframe/build/aframe-ar.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>增强现实体验</h1>
+        <p>通过摄像头识别标记并显示3D对象</p>
+    </header>
+
+    <a-scene embedded arjs>
+        <!-- 加载AR标记 -->
+        <a-marker preset="hiro">
+            <!-- 在识别到标记时显示3D模型 -->
+            <a-box position="0 0.5 0" material="color: red;"></a-box>
+        </a-marker>
+
+        <!-- 摄像头 -->
+        <a-entity camera></a-entity>
+    </a-scene>
+
+    <footer>
+        <p><a href="主页.html">返回主页</a></p>
+    </footer>
+</body>
+</html>
